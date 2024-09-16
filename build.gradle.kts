@@ -20,9 +20,3 @@ tasks.test {
 kotlin {
     jvmToolchain(19)
 }
-
-ktlint {
-    version = "0.38.2"
-    android = true // to use the Android Studio KtLint plugin style
-    ignoreFailures = false
-}

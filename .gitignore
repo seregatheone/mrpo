@@ -4,6 +4,11 @@
 .idea/**/dictionaries
 .idea/**/shelf
 
+.idea/compiler.xml
+.idea/jarRepositories.xml
+.idea/kotlinc.xml
+
+
 # AWS User-specific
 .idea/**/aws.xml
 
