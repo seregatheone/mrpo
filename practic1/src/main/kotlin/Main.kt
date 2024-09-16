@@ -1,16 +1,22 @@
 package mrpo.practics
 
+import mrpo.practics.acquaintance.GetAcquaintance
+import mrpo.practics.games.GameLauncher
+import mrpo.practics.games.GeometricProgression
+import mrpo.practics.games.LCM
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
-    val name = "Kotlin"
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    println("Hello, " + name + "!")
+    val getAcquaintance = GetAcquaintance()
+    val gameLauncher = GameLauncher(getAcquaintance.name)
 
-    for (i in 1..5) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        println("i = $i")
+    getAcquaintance.askName()
+
+    val game = gameLauncher.requestGame()
+
+    for (i in 0..2){
+        game.playGame()
     }
+
 }
